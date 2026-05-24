@@ -61,7 +61,7 @@ logger.info('Javob berildi: ' + sender_name)
 async def main():
 await client.start()
 me = await client.get_me()
-logger.info(‘Avtojavob ishga tushdi: @’ + str(me.username))
+logger.info('Avtojavob ishga tushdi: @' + str(me.username))
 await client.run_until_disconnected()
 
 if **name** == ‘**main**’:
