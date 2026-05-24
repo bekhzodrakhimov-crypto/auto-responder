@@ -7,7 +7,7 @@ from telethon.tl.types import User
 import anthropic
 
 API_ID = int(os.environ.get('API_ID', 37110545))
-API_HASH = os.environ.get('API_HASH', ‘8653918a5c9f2f34d2ccb681df85f648’)
+API_HASH = os.environ.get('API_HASH', '8653918a5c9f2f34d2ccb681df85f648')
 ANTHROPIC_API_KEY = os.environ.get('ANTHROPIC_API_KEY', 'ключ_сюда')
 YOUR_NAME = os.environ.get('YOUR_NAME', 'Behzodjon')
 REPLY_COOLDOWN_MINUTES = 30
