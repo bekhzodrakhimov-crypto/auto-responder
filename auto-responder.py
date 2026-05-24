@@ -56,7 +56,7 @@ reply = await generate_reply(message_text, sender_name)
 await asyncio.sleep(2)
 await event.reply(reply)
 replied_users[user_id] = datetime.now()
-logger.info(’Javob berildi: ’ + sender_name)
+logger.info('Javob berildi: ' + sender_name)
 
 async def main():
 await client.start()
