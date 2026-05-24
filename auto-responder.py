@@ -17,12 +17,12 @@ logger = logging.getLogger(__name__)
 client = TelegramClient('session', API_ID, API_HASH)
 claude = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
 replied_users = {}
-def should_reply(user_id):
-if user_id not in replied_users:
-return True
-minutes = (datetime.now()
-replied_users[user_id]).seconds / 60
-return minutes >= REPLY_COOLDOWN_MINUTES
+20    def should_reply(user_id):
+21        if user_id not in replied_users:
+22            return True
+23        minutes = (datetime.now() -
+24        replied_users[user_id]).seconds / 60
+25        return minutes >= REPLY_COOLDOWN_MINUTES
 async def generate_reply(message_text, sender_name):
 try:
 response = claude.messages.create(
