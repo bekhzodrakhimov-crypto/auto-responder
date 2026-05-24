@@ -12,9 +12,9 @@ import anthropic
 # ============================
 
 API_ID = 37110545
-API_HASH = “8653918a5c9f2f34d2ccb681df85f648”
-ANTHROPIC_API_KEY = “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”   # <– вставьте ваш ключ
-YOUR_NAME = “Behzodjon”
+API_HASH = '8653918a5c9f2f34d2ccb681df85f648'
+ANTHROPIC_API_KEY = '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'   # <– вставьте ваш ключ
+YOUR_NAME = 'Behzodjon'
 AUTO_REPLY_ALL = True
 ONLY_PRIVATE = True
 REPLY_COOLDOWN_MINUTES = 30
