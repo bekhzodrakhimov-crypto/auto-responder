@@ -6,16 +6,16 @@ from telethon import TelegramClient, events
 from telethon.tl.types import User
 import anthropic
 
-API_ID = int(os.environ.get(‘API_ID’, 37110545))
-API_HASH = os.environ.get(‘API_HASH’, ‘8653918a5c9f2f34d2ccb681df85f648’)
-ANTHROPIC_API_KEY = os.environ.get(‘ANTHROPIC_API_KEY’, ‘ключ_сюда’)
-YOUR_NAME = os.environ.get(‘YOUR_NAME’, ‘Behzodjon’)
+API_ID = int(os.environ.get('API_ID', 37110545))
+API_HASH = os.environ.get('API_HASH', ‘8653918a5c9f2f34d2ccb681df85f648’)
+ANTHROPIC_API_KEY = os.environ.get('ANTHROPIC_API_KEY', 'ключ_сюда')
+YOUR_NAME = os.environ.get('YOUR_NAME', 'Behzodjon')
 REPLY_COOLDOWN_MINUTES = 30
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(**name**)
 
-client = TelegramClient(‘session’, API_ID, API_HASH)
+client = TelegramClient('session', API_ID, API_HASH)
 claude = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
 replied_users = {}
 
@@ -30,8 +30,8 @@ try:
 response = claude.messages.create(
 model=‘claude-sonnet-4-20250514’,
 max_tokens=300,
-system=‘Sen ’ + YOUR_NAME + ’ nomli foydalanuvchining shaxsiy AI yordamchisisiz. Uning nomidan qisqa va muloyim javob ber. Suhbatdoshning tilidagi javob ber (rus, uzbek, ingliz).’,
-messages=[{‘role’: ‘user’, ‘content’: sender_name + ’ dan xabar: ’ + message_text}]
+system='Sen ' + YOUR_NAME + ' nomli foydalanuvchining shaxsiy AI yordamchisisiz. Uning nomidan qisqa va muloyim javob ber. Suhbatdoshning tilidagi javob ber (rus, uzbek, ingliz).’,
+messages=[{‘role’: ‘user’, ‘content’: sender_name + ' dan xabar: ' + message_text}]
 )
 return response.content[0].text
 except Exception as e:
