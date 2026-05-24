@@ -46,7 +46,7 @@ sender = await event.get_sender()
 if not isinstance(sender, User) or sender.bot:
 return
 user_id = sender.id
-sender_name = sender.first_name or ‘Noma`lum’
+sender_name = sender.first_name or 'Noma`lum'
 message_text = event.message.text
 if not message_text:
 return
