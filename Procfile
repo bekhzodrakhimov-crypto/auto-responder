@@ -1,1 +1,1 @@
-worker: auto_responder.pу
+worker: auto-responder.pу
