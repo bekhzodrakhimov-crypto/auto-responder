@@ -35,8 +35,8 @@ messages=[{'role': 'user', 'content': sender_name + ' dan xabar: ' + message_tex
 )
 return response.content[0].text
 except Exception as e:
-logger.error(‘Xato: ’ + str(e))
-return YOUR_NAME + ’ hozir band, keyinroq javob beradi.’
+logger.error('Xato: ' + str(e))
+return YOUR_NAME + ' hozir band, keyinroq javob beradi.'
 
 @client.on(events.NewMessage(incoming=True))
 async def handle_incoming(event):
