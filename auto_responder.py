@@ -1,2 +1,0 @@
-telethon==1.36.0
-anthropic==0.34.0
