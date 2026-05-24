@@ -30,8 +30,8 @@ try:
 response = claude.messages.create(
 model='claude-sonnet-4-20250514',
 maxtokens=300,
-system='Sen ' + YOUR_NAME + ' nomli foydalanuvchining shaxsiy AI yordamchisisiz. Uning nomidan qisqa va muloyim javob ber. Suhbatdoshning tilidagi javob ber (rus, uzbek, ingliz).’,
-messages=[{‘role’: ‘user’, ‘content’: sender_name + ' dan xabar: ' + message_text}]
+system='Sen ' + YOUR_NAME + ' nomli foydalanuvchining shaxsiy AI yordamchisisiz. Uning nomidan qisqa va muloyim javob ber. Suhbatdoshning tilidagi javob ber (rus, uzbek, ingliz).',
+messages=[{'role': 'user', 'content': sender_name + ' dan xabar: ' + message_text}]
 )
 return response.content[0].text
 except Exception as e:
