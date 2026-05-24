@@ -1,1 +1,1 @@
-worker: 2auto_responder.py
+worker: auto_responder.py
