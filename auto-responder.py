@@ -5,7 +5,6 @@ from datetime import datetime
 from telethon import TelegramClient, events
 from telethon.tl.types import User
 import anthropic
-
 API_ID = int(os.environ.get('API_ID', 37110545))
 API_HASH = os.environ.get('API_HASH', '8653918a5c9f2f34d2ccb681df85f648')
 ANTHROPIC_API_KEY = os.environ.get('ANTHROPIC_API_KEY', 'ключ_сюда')
@@ -18,13 +17,12 @@ logger = logging.getLogger(__name__)
 client = TelegramClient('session', API_ID, API_HASH)
 claude = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
 replied_users = {}
-
 def should_reply(user_id):
 if user_id not in replied_users:
 return True
-minutes = (datetime.now() - replied_users[user_id]).seconds / 60
+minutes = (datetime.now()
+replied_users[user_id]).seconds / 60
 return minutes >= REPLY_COOLDOWN_MINUTES
-
 async def generate_reply(message_text, sender_name):
 try:
 response = claude.messages.create(
