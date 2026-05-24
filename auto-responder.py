@@ -24,7 +24,7 @@ REPLY_COOLDOWN_MINUTES = 30
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(**name**)
 
-client = TelegramClient(“session”, API_ID, API_HASH)
+client = TelegramClient('session', API_ID, API_HASH)
 claude = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
 replied_users = {}
 
