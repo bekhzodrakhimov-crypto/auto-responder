@@ -28,8 +28,8 @@ return minutes >= REPLY_COOLDOWN_MINUTES
 async def generate_reply(message_text, sender_name):
 try:
 response = claude.messages.create(
-model=‘claude-sonnet-4-20250514’,
-max_tokens=300,
+model='claude-sonnet-4-20250514',
+maxtokens=300,
 system='Sen ' + YOUR_NAME + ' nomli foydalanuvchining shaxsiy AI yordamchisisiz. Uning nomidan qisqa va muloyim javob ber. Suhbatdoshning tilidagi javob ber (rus, uzbek, ingliz).’,
 messages=[{‘role’: ‘user’, ‘content’: sender_name + ' dan xabar: ' + message_text}]
 )
