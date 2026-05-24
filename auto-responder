@@ -1,0 +1,27 @@
+import asyncio
+import os
+from telethon import TelegramClient, events
+from telethon.tl.types import User
+
+API_ID = int(os.environ.get(“API_ID”, “37110545”))
+API_HASH = os.environ.get(“API_HASH”, “8653918a5c9f2f34d2ccb681df85f648”)
+BOT_TOKEN = os.environ.get(“BOT_TOKEN”, “”)
+TEXT = os.environ.get(“TEXT”, “Hozir band, keyinroq javob beraman!”)
+
+client = TelegramClient(“session”, API_ID, API_HASH)
+
+@client.on(events.NewMessage(incoming=True))
+async def handler(event):
+if event.is_private:
+sender = await event.get_sender()
+if isinstance(sender, User) and not sender.bot:
+await asyncio.sleep(1)
+await event.reply(TEXT)
+
+async def main():
+await client.start()
+me = await client.get_me()
+print(“Started:”, me.username)
+await client.run_until_disconnected()
+
+asyncio.run(main())
