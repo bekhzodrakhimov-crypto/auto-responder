@@ -64,5 +64,5 @@ me = await client.get_me()
 logger.info('Avtojavob ishga tushdi: @' + str(me.username))
 await client.run_until_disconnected()
 
-if **name** == ‘**main**’:
+if **name** == '**main**':
 asyncio.run(main())
