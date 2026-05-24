@@ -13,7 +13,7 @@ YOUR_NAME = os.environ.get('YOUR_NAME', 'Behzodjon')
 REPLY_COOLDOWN_MINUTES = 30
 
 logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(**name**)
+logger = logging.getLogger(__name__)
 
 client = TelegramClient('session', API_ID, API_HASH)
 claude = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
