@@ -1,1 +1,1 @@
-worker:auto-responder.ру
+worker: python auto-responder.py
