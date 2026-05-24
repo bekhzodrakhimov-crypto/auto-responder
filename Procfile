@@ -1,1 +1,1 @@
-worker: auto-responder.pу
+worker:auto-responder.ру
